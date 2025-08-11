@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <locale.h>
+void media( float aps, float avm, float avt){
+    printf("Notas:\n APS-%2.f\n AVM-%2.f\n AVT-%2.f\n Média: %2.f",aps,avm,avt,(aps+avm+avt)/2);
+}
+int main(){
+    setlocale(LC_ALL,"");
+    float aps,avm,avt;
+    printf("Digite a nota (APS) \n");
+    scanf("%f",&aps);
+    printf("Digite a nota (AVM) \n");
+    scanf("%f",&avm);
+    printf("Digite a nota (AVT) \n");
+    scanf("%f",&avt);
+    while (aps <=0 || avm <=0 || avt <=0){
+        printf("Números inválidos\n");
+        printf("Digite a nota (APS) \n");
+        scanf("%f",&aps);
+        printf("Digite a nota (AVM) \n");
+        scanf("%f",&avm);
+        printf("Digite a nota (AVT) \n");
+        scanf("%f",&avt);
+    }
+    media(aps,avm,avt);
+    return 0;
+}
+

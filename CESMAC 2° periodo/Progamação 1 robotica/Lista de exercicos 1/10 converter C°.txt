@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <locale.h>
+void transformar(int temp){
+    printf("A temperatura %dC° em Farenhaint é %dF°",temp,(temp*9/5)+32);
+}
+int main() {
+    setlocale(LC_ALL, "");
+    float temp;
+    printf("Digite a temperatura em C° ");
+    scanf("%f",&temp);
+    transformar(temp);
+
+    return 0;
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+void calcular(float comprimento, float largura){
+    printf("A area e: %.2f", comprimento*largura);
+}
+int main()
+{
+    float comprimento, largura;
+    printf("Digite o valor do comprimento\n");
+    scanf("%f",&comprimento);
+    printf("Digite o valor da altura\n");
+    scanf("%f",&largura);
+    while (comprimento <0 || largura<0){
+        printf("Numero invalido\n");
+        printf("Digite o valor do comprimento\n");
+        scanf("%f",&comprimento);
+        printf("Digite o valor da altura\n");
+        scanf("%f",&largura);
+    }
+    calcular(comprimento,largura);
+    
+
+    return 0;
+}

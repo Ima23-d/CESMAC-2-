@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <locale.h>
+// void calcular(int n_1, int n_2){
+//     printf("SOMA\n");
+//     printf("%d + %d = %d\n", n_1,n_2,n_1+n_2);
+//     printf("SUBTRAÇÂO\n");
+//     printf("%d - %d = %d\n", n_1,n_2,n_1-n_2);
+//     printf("Multiplicação\n");
+//     printf("%d * %d = %d\n", n_1,n_2,n_1*n_2);
+//     printf("Divisão\n");
+//     printf("%d / %d = %d\n", n_1,n_2,n_1/n_2);
+// }
+void soma(int n_1, int n_2){
+    printf("SOMA\n");
+    printf("%d + %d = %d\n", n_1,n_2,n_1+n_2);
+}
+void subtracao(int n_1, int n_2){
+    printf("SUBTRAÇÂO\n");
+    printf("%d - %d = %d\n", n_1,n_2,n_1-n_2);
+}
+void divisao(int n_1, int n_2){
+    printf("Divisão\n");
+    printf("%d / %d = %d\n", n_1,n_2,n_1/n_2);
+}
+void multiplicacao(int n_1, int n_2){
+    printf("Multiplicação\n");
+    printf("%d * %d = %d\n", n_1,n_2,n_1*n_2);
+}
+int main(){
+    setlocale(LC_ALL,"");
+    int n_1,n_2;
+    printf("Calculadora....\n");
+    printf("Digite o valor do primeiro numero \n");
+    scanf("%d",&n_1);
+    printf("Digite o valor do segundo numero \n");
+    scanf("%d",&n_2);
+    while (n_1<0 || n_2 <0){
+        printf("Digite numeros positivos\n");
+        printf("Digite o valor do primeiro numero \n");
+        scanf("%d",&n_1);
+        printf("Digite o valor do segundo numero \n");
+        scanf("%d",&n_2);
+    }
+    int select;
+    printf("SELECIONE\n");
+    printf("1-SOMA\n 2-SUBTRAÇÂO\n 3-DIVISÂO\n 4-MULTIPLICAÇÂO\n");
+    scanf("%d",&select);
+    
+    switch (select){
+        case 1:soma(n_1,n_2);break;
+        case 2:subtracao(n_1,n_2);break;
+        case 3:divisao(n_1,n_2);break;
+        case 4:multiplicacao(n_1,n_2);break;
+        default:
+        while (1) {
+            printf("numero invalido\n");
+            printf("Digite o valor do primeiro numero \n");
+            scanf("%d",&n_1);
+            printf("Digite o valor do segundo numero \n");
+            scanf("%d",&n_2);
+            }
+        break;
+    }
+    
+
+    return 0;
+}
+
+

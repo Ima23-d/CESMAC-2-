@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <locale.h>
+
+void fatorial(int number) {
+    int f = 1;
+    for (int i = 1; i <= number; i++) {
+        f *= i;
+    }
+    printf("Fatorial de %d é %d\n", number, f);
+}
+
+int main() {
+    setlocale(LC_ALL, "");
+    int number;
+
+    printf("Digite um número: ");
+    scanf("%d", &number);
+
+    while (number <= 0) {
+        printf("Número inválido\nDigite um número: ");
+        scanf("%d", &number);
+    }
+
+    fatorial(number);
+    return 0;
+}

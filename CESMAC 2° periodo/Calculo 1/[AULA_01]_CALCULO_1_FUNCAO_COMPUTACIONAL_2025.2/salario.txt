@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <locale.h>
+void calcular(float salario){
+    if (salario <1000.0){
+    printf("Seu salario é R$%.2f\nCom o aumento de 15%%, fica R$%.2f\n", salario, salario * 1.15);
+    }else if (salario >=1000.0 && salario <= 2000){
+     printf("Seu salario é R$%.2f\nCom o aumento de 10%%, fica R$%.2f\n", salario, salario * 1.10);
+    }else if (salario > 2000){
+    printf("Seu salario é R$%.2f\nCom o aumento de 5%%, fica R$%.2f\n", salario, salario * 1.5);
+    }
+}
+int main(){
+    setlocale(LC_ALL,"");
+    float salario;
+    printf("Digite o seu salário(R$): ");
+    scanf("%f",&salario);
+    while (salario <=0 ){
+        printf("Numero invalido\n");
+        printf("Digite o seu salário(R$): ");
+        scanf("%f",&salario);
+    }
+    calcular(salario);
+    return 0;
+}
+
+

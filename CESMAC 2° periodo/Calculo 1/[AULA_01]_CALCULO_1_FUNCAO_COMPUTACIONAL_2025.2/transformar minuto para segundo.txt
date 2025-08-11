@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <locale.h>
+void transformar(int valor_minuto){
+   printf("O numero %dmin em segundos fica %ds",valor_minuto,valor_minuto*60);
+}
+int main()
+{   setlocale(LC_ALL,"");
+    int valor_minuto;
+    printf("Converter de minuto para segundo\n");
+    printf("Digite o valor\n ");
+    scanf("%d",&valor_minuto);
+    while (valor_minuto <0){
+        printf("Digite valore positivos\n");
+        printf("Digite o valor\n ");
+        scanf("%d",&valor_minuto);
+    }
+    transformar(valor_minuto);
+
+    return 0;
+}

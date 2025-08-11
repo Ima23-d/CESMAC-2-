@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+void calcular(int lado_1, int lado_2, int lado_3){
+    printf("O perimetro do triangulo é igual: %d", lado_1+lado_2+lado_3);
+}
+int main()
+{   setlocale(LC_ALL,"");
+    int lado_1,lado_2,lado_3;
+    printf("Digite o valor do lado1\n ");
+    scanf("%d",&lado_2);
+    printf("Digite o valor do lado2\n ");
+    scanf("%d",&lado_1);
+    printf("Digite o valor do lado3\n ");
+    scanf("%d",&lado_3);
+    while (lado_1 <0 || lado_2 <0 || lado_3 <0){
+        printf("Digite valores positivos\n");
+        printf("Digite o valor do lado\n ");
+        printf("Digite o valor do lado1\n ");
+        scanf("%d",&lado_2);
+        printf("Digite o valor do lado2\n ");
+        scanf("%d",&lado_1);
+        printf("Digite o valor do lado3\n ");
+        scanf("%d",&lado_3);
+    }
+    calcular(lado_1,lado_2,lado_3);
+
+    return 0;
+}

@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <locale.h>
+void calcular (int base, int altura){
+    printf("A área do triangulo é: %d", base*altura/2);
+}
+int main()
+{   int base,altura;
+    printf("Digite o valor da base \n");
+    scanf("%d",&base);
+    printf("Digite o valor da altura \n");
+    scanf("%d",&altura);
+    while (base <0 || altura <0){
+        printf("Digite valores positivo s\n");
+        printf("Digite o valor da base \n");
+        scanf("%d",&base);
+        printf("Digite o valor da altura \n");
+        scanf("%d",&altura);
+    }
+    calcular(base,altura);
+
+    return 0;
+}

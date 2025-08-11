@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <locale.h>
+void calcular(int comprimento, int largura){
+    printf("O perimetro do triangulo é igual: %d", (comprimento*2) + (largura*2));
+}
+int main()
+{   setlocale(LC_ALL,"");
+    int comprimento, largura;
+    printf("Digite o comprimento \n");
+    scanf("%d",&comprimento);
+    printf("Digite a largura \n");
+    scanf("%d",&largura);
+    while (comprimento <0 || largura <0 ){
+        printf("Numero invalidos\n");
+        printf("Digite o comprimento \n");
+        scanf("%d",&comprimento);
+        printf("Digite a largura \n");
+        scanf("%d",&largura);
+    }
+    calcular(comprimento,largura);
+    
+
+    return 0;
+}

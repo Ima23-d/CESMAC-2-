@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <locale.h>
+void eleitor(int idade){
+   if(idade >=18 && idade <=65){
+         printf("Você tem %d anos. Eleitor obrigatório",idade);
+    }else if (idade >=16 && idade <18 || idade > 65){
+        printf("Você tem %d anos. Eleitor facultativo",idade);
+    }else{
+         printf("Você tem %d anos. Não eleitor",idade);
+    }
+}
+int main(){
+    setlocale(LC_ALL,"");
+    int idade;
+    printf("Digite a sua idade: ");
+    scanf("%d",&idade);
+    while (idade <=0){
+        printf("Idade inválido!\n");
+        printf("Digite a sua idade: ");
+        scanf("%d",&idade);
+    }
+    eleitor(idade);
+    return 0;
+}
+
+

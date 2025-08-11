@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <locale.h>
+void calcular(int lado){
+    printf("A área do quadrado é: %d", lado*lado);
+}
+int main()
+{   setlocale(LC_ALL,"");
+    int lado;
+    printf("Digite o valor do lado ");
+    scanf("%d",&lado);
+    while (lado <0){
+        printf("Valor negativo não permitido \n");
+        printf("Digite o valor do lado ");
+        scanf("%d",&lado);
+    }
+    calcular(lado);
+
+    return 0;
+}

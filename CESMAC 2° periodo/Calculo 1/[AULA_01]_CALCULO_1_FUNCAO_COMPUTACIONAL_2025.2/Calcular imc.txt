@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <locale.h>
+void imc(float peso, float altura){
+    float IMC = peso/(altura*2);
+    printf("Seu IMC = %2.f\n", IMC);
+    if (IMC > 18.5 && IMC < 24.9){
+        printf("Peso normal");
+    }else if (IMC < 18.5){
+        printf("Abaixo do peso");
+    } else if (IMC > 25 && IMC < 29.9){
+        printf("Sobrepeso");
+    }else{
+        printf("Obesidade");
+    }
+}
+int main(){
+    setlocale(LC_ALL,"");
+    float peso,altura;
+    printf("Calcular IMC....\n");
+    printf("Digite seu peso(kg) \n");
+    scanf("%f",&peso);
+    printf("Digite sua altura(m) \n");
+    scanf("%f",&altura);
+    while (peso <0 || altura <0){
+        printf("Número inválidos\n");
+        printf("Digite seu peso(kg) \n");
+        scanf("%f",&peso);
+        printf("Digite sua altura(m) \n");
+        scanf("%f",&altura);
+    }
+    imc(peso,altura);
+
+    return 0;
+}

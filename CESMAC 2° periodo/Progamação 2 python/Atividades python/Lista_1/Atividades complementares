@@ -1,1 +1,20 @@
+usuario = input("Digite seu usuario: ")
+senha = input("Digite sua senha: ")
 
+confirmar_user = input("Confirme seu usuario: ")
+confirmar_senha = input("Confirme sua senha: ")
+
+tentativas = 0
+
+
+while (confirmar_user != usuario or confirmar_senha != senha):
+    tentativas += 1
+    if tentativas > 4:
+        print("Usuário bloqueado!")
+        break
+    print("Usuário ou senha incorretos! Tente novamente.\n")
+    print(tentativas)
+    confirmar_user = input("Confirme seu usuario: ")
+    confirmar_senha = input("Confirme sua senha: ")
+else:
+    print("Usuário cadastrado com sucesso!")

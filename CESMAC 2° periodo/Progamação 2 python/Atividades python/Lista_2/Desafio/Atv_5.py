@@ -1,5 +1,5 @@
 num = int(input("Digite um número inteiro: "))
-if num < 2:
+if num <= 2:
     print(f"{num} não é primo")
 else:
     primo = True
@@ -10,4 +10,5 @@ else:
     if primo:
         print(f"{num} é primo")
     else:
+
         print(f"{num} não é primo")
